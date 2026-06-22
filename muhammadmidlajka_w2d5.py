@@ -11,9 +11,7 @@ st.set_page_config(
 )
 
 df = pd.read_csv(
-    r"..\samplesuperstore_cleaned.csv",
-    parse_dates=["order_date", "ship_date"]
-)
+    r"..\samplesuperstore_cleaned.csv")
 df['order_date']=pd.to_datetime(df['order_date'])
 
 with st.sidebar:
